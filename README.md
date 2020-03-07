@@ -1,6 +1,38 @@
 # Frontend-Essentials
 Some things I think are pretty good to be aware of for frontend development. I put MDN and Javascript.info links where applicable for more examples and in depth explanation.
 
+## CSS Defaults
+Sometimes browsers add the darnest defaults...here's an effort to make things consistent across browsers :D
+
+```css
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+html {
+  height: 100%;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+```
+
 ## Making Api Request
 
 ### XMLHttpRequest (Supports Older Browsers)
