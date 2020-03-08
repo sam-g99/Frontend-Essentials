@@ -35,7 +35,7 @@ html {
 
 ## Making Api Request
 
-### XMLHttpRequest (Supports Older Browsers)
+### XMLHttpRequest (Supported By Older Browsers)
 
 #### Get Request Example
 ```js
