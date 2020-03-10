@@ -1,5 +1,5 @@
 # Frontend-Essentials
-Some things I think are pretty good to be aware of for frontend development. I put MDN and Javascript.info links where applicable for more examples and in depth explanation.
+Some things I think are pretty good to be aware of for frontend development. I put [MDN](https://developer.mozilla.org/en-US/) and [Javascript.info]() links where applicable for more examples and/or in-depth explanation.
 
 ## CSS Defaults
 Sometimes browsers add the darnest defaults...here's an effort to make things consistent across browsers :D
@@ -155,5 +155,24 @@ If you have a lot of stuff you want to add to the dom, I like to construct it in
 </script>
 ```
 [MDN - Document Fragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment)
+
+## Quick Tips
+
+### Using `defer` For External Scripts
+If you have an external script that relies on certain dom elements existing you may be tempted to chuck it to the bottom. However this causes the script to wait for the whole dom to be loaded before even parsing the JavaScript. With `defer` the JavaScript is parsed but waits for the document to load before executing.
+(This html document is simplified for this example.)
+```html
+<html>
+  <head>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="elementJavaScriptNeeds"></div>
+  </body>
+</html>
+```
+[MDN - `<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) (ctrl f "defer")
+
+[Javascript.info - defer](https://javascript.info/script-async-defer#defer)
 
 
